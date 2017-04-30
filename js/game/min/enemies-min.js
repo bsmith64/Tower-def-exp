@@ -1,0 +1,1 @@
+function enemy(e,n,t){this.level=e,this.hp=n,this.speed=t}for(var spawnBox=document.getElementById("unit-spawn"),pop=10,spawnCollection=[],i=0;pop>i;i++)spawnCollection[i]=new enemy(1,100,5);for(var s=0;s<spawnCollection.length;s++){var RG_enemy=document.createElement("div");RG_enemy.className="enemy-unit",spawnBox.appendChild(RG_enemy)}

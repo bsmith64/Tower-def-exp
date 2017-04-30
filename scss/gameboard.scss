@@ -1,0 +1,16 @@
+// Styles the Gameboard
+
+.grid { 
+	margin:1em auto; 
+	border-collapse:collapse; 
+	td {
+	    cursor:pointer;
+	    width:30px; height:30px;
+	    border:1px solid #ccc;
+	    text-align:center;
+	    font-family:sans-serif; 
+	    font-size:13px;
+	    color:transparent;
+	    background-color:lighten(green, 70%);
+	}
+}

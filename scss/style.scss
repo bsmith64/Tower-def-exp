@@ -1,0 +1,70 @@
+
+@import "gameboard";
+
+section#game {
+	width:100%;
+	.game-wrapper {
+		width:70%;
+		height:500px;
+		position:relative;
+		background-color:#ebebeb;
+		margin:0 auto;
+	}
+
+
+	.tower {
+		width:25px;
+		height:25px;
+		background-color:blue;
+		position:relative;
+	}
+
+
+	/* Enemies */
+
+	#unit-spawn {
+		position:absolute;
+		left:0;
+		top:50%;
+		width:50px;
+		height:100px;
+		background-color:lighten(green, 70%);
+		-ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+	}
+
+	.enemy-unit {
+		width:25px;
+		height:25px;
+		background-color:red;
+		position:absolute;
+	}
+
+
+	.message-box {
+		width:100%;
+		background-color:rgba(255,255,255, 0.5);
+		padding:15px;
+		#message {
+			color:#000000;
+		}
+	}
+
+	.ui {
+		position:absolute;
+		bottom:0;
+		width:100%;
+		background-color:rgba(0,0,0, 0.8);
+		padding:10px 0;
+			a {
+				color:#ffffff;
+				font-weight:600;
+				text-decoration:none;
+				font-size:14px;
+				margin:0 20px;
+				cursor:pointer !important;
+			}
+	}
+
+}

@@ -1,0 +1,1 @@
+function runGame(){state="running",this.launchGame=function(){playG.launchGame()},this.onQuit=function(){message="Thanks for playing!, Play Again?",message_box.innerHTML=message,console.log("run game envoked")},this.toStartMenu=function(){state="start"}}runG=new runGame;

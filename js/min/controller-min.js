@@ -1,0 +1,1 @@
+var state,message,message_box=document.getElementById("message"),start=document.getElementById("start"),quit=document.getElementById("quit");startG.onStart(),start.addEventListener("click",function(){startG.launchApp()},!1),quit.addEventListener("click",function(){endG.onQuit()},!1);

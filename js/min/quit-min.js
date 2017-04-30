@@ -1,0 +1,1 @@
+function endGame(){state="main_menu",this.onQuit=function(){message="Thanks for playing!, Play Again?",message_box.innerHTML=message,console.log("quit envoked")},this.toStartMenu=function(){state="start"}}endG=new endGame;

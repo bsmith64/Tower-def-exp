@@ -1,0 +1,1 @@
+function startGame(){state="start",this.onStart=function(){message="Welcome to The Game",message_box.innerHTML=message,console.log("start envoked")},this.launchApp=function(){message="Lets Begin!",message_box.innerHTML=message,runG.launchGame()}}startG=new startGame;
