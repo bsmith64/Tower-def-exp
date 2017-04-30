@@ -25,21 +25,53 @@ for (var i = 0; i < pop; i++) {
 }
 
 // Spawns enemies
-function spawn(s, sendUnit) {
+function spawn(runUnit, pos) {
 	for (var s = 0; s < spawnCollection.length; s++) {
 		var RG_enemy = document.createElement('div');
-		RG_enemy.className = 'enemy-unit';
+		RG_enemy.className = 'enemy-unit unit-speed';
 		spawnBox.appendChild(RG_enemy);
+
+		runUnit(RG_enemy);
+		// pos(RG_enemy);
 	}
-	sendUnit();
+}
+spawn(sendUnit, unitPos);
+
+// Moves the Unit via CSS
+function sendUnit(unit) {
+	for (var a = 0; a < spawnCollection.length; a++) {
+		setTimeout(function() {
+			unit.style.left = "100px";
+		}, 200);
+	}
 }
 
-// callback needs help !!!!!!
-function sendUnit() {
-	setTimeout(function() {
-		RG_enemy.style.left = "100px";
-		console.log('sending');
-	}, 200);
+// Get units position
+function unitPos(unit) {
+	setInterval(function() {
+		var u_top = unit.offsetTop;
+		var u_left = unit.offsetLeft;
+	},1000);
 }
 
-spawn();
+// work in progress
+var counter = 0;
+function calc() {
+	var limit = 10;
+
+	if (counter <= limit) {
+		counter += 1;
+	} else {
+		counter == limit;
+	}
+	console.log('Count: ' + counter);
+}
+
+setInterval(function() {
+	calc();
+},500);
+
+
+
+
+
