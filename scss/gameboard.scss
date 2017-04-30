@@ -4,6 +4,7 @@
 	margin:1em auto; 
 	border-collapse:collapse; 
 	td {
+		position:relative;
 	    cursor:pointer;
 	    width:30px; height:30px;
 	    border:1px solid #ccc;
@@ -12,5 +13,30 @@
 	    font-size:13px;
 	    color:transparent;
 	    background-color:lighten(green, 70%);
+	}
+}
+
+.message-box {
+	width:100%;
+	background-color:rgba(255,255,255, 0.5);
+	padding:15px;
+	#message {
+		color:#000000;
+	}
+}
+
+.ui {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	background-color:rgba(0,0,0, 0.8);
+	padding:10px 0;
+	a {
+		color:#ffffff;
+		font-weight:600;
+		text-decoration:none;
+		font-size:14px;
+		margin:0 20px;
+		cursor:pointer !important;
 	}
 }

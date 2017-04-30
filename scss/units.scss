@@ -1,0 +1,17 @@
+
+
+.enemy-unit {
+	width:25px;
+	height:25px;
+	background-color:red;
+	position:absolute;
+	z-index:999;
+
+	top:50%;
+	left:50%;
+
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+}
