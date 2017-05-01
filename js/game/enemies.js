@@ -2,6 +2,7 @@
 
 /* * PREFIXES * 
 	1. RG_ == Rendering in Game
+	2. u_ == unit arg
 */
 
 var spawnBox = document.getElementById('cell-202');
@@ -10,6 +11,8 @@ var spawnBox = document.getElementById('cell-202');
 var pop = 10;
 // SpawnCollection holds unites created
 var spawnCollection = [];
+// Universal Tick
+var counter = 0;
 
 // Basic Unit build object
 function enemy(level, hp, speed) {
@@ -22,29 +25,37 @@ function enemy(level, hp, speed) {
 for (var i = 0; i < pop; i++) {
 	//Gen Units
 	spawnCollection[i] = new enemy(1,100,5);
+
+	var u_limit = spawnCollection.length;
 }
 
 // Spawns enemies
-function spawn(runUnit, pos) {
+function spawn(pos) {
+
+	var renderedUnits = [];
+
 	for (var s = 0; s < spawnCollection.length; s++) {
 		var RG_enemy = document.createElement('div');
 		RG_enemy.className = 'enemy-unit unit-speed';
 		spawnBox.appendChild(RG_enemy);
 
-		runUnit(RG_enemy);
+		renderedUnits.push(RG_enemy);
+
 		// pos(RG_enemy);
 	}
-}
-spawn(sendUnit, unitPos);
 
-// Moves the Unit via CSS
-function sendUnit(unit) {
-	for (var a = 0; a < spawnCollection.length; a++) {
-		setTimeout(function() {
-			unit.style.left = "100px";
-		}, 200);
-	}
+	var c = 0;
+	var i = setInterval(function(){
+	    renderedUnits[c].style.left = "250px";
+	    c++;
+	    if(c === 10) {
+	        clearInterval(i);
+	    }
+	}, 800);
+
 }
+spawn(unitPos);
+
 
 // Get units position
 function unitPos(unit) {
@@ -54,22 +65,9 @@ function unitPos(unit) {
 	},1000);
 }
 
-// work in progress
-var counter = 0;
-function calc() {
-	var limit = 10;
 
-	if (counter <= limit) {
-		counter += 1;
-	} else {
-		counter == limit;
-	}
-	console.log('Count: ' + counter);
-}
 
-setInterval(function() {
-	calc();
-},500);
+
 
 
 
