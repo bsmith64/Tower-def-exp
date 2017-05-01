@@ -40,7 +40,6 @@ function clickableGrid( rows, cols, callback ){
 }
 
 
-
 var gb_width = document.getElementById('gameBoard').offsetWidth;
 var gb_height = document.getElementById('gameBoard').offsetheight;
 

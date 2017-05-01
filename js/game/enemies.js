@@ -14,6 +14,7 @@ var spawnCollection = [];
 // Universal Tick
 var counter = 0;
 
+
 // Basic Unit build object
 function enemy(level, hp, speed) {
 	this.level = level;
@@ -46,16 +47,15 @@ function spawn(pos) {
 
 	var c = 0;
 	var i = setInterval(function(){
-	    renderedUnits[c].style.left = "250px";
+	    renderedUnits[c].style.left = gb_width - 15 + 'px';
 	    c++;
 	    if(c === 10) {
 	        clearInterval(i);
 	    }
-	}, 800);
+	}, 1500);
 
 }
 spawn(unitPos);
-
 
 // Get units position
 function unitPos(unit) {
